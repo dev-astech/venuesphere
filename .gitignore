@@ -1,0 +1,21 @@
+# .gitignore
+
+# --- Secrets ---
+# Never upload your environment variables file.
+# This contains database passwords and secret keys.
+.env
+
+# --- Virtual Environment ---
+# This folder is huge, specific to your computer's OS,
+# and the hosting server will build its own from requirements.txt.
+venv/
+
+# --- Python Cache ---
+# Python generates these temporary files. They are not needed.
+__pycache__/
+*.pyc
+
+# --- IDE / Editor Settings ---
+# These are your personal editor settings and don't belong in the project.
+.vscode/
+.idea/
