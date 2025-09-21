@@ -4,6 +4,7 @@
 import os
 from flask import Flask, request, jsonify # Flask tools
 from flask_bcrypt import Bcrypt # Password hashing tool
+from flask_cors import CORS
 from models import (
     db, User, UserType, CustomerProfile, ProviderProfile, AdminProfile,
     Venue, VenueCategory, Amenity # <-- Add these
@@ -15,6 +16,7 @@ from flask_jwt_extended import create_access_token, JWTManager, jwt_required, ge
 load_dotenv() # Load variables from the .env file
 
 app = Flask(__name__) # Create our Flask application instance
+CORS(app)
 
 # Step 3: Configure the application
 # We get the secret URLs and keys from the environment file
